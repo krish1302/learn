@@ -1,0 +1,12 @@
+
+
+<b>From child {{name}}</b>
+
+<input #tagname type="text" placeholder="to child">
+<button (click)="send(tagname.value)">send to child</button>
+
+<app-child1 [msg] = "msg"  (name_emitter)="nameCollector($event)"></app-child1>
+
+
+
+<router-outlet></router-outlet>
